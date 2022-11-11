@@ -5,11 +5,11 @@
 class ScoreCompose < Formula
   desc ""
   homepage "https://github.com/rachfop/score-compose"
-  version "0.9"
+  version "0.11"
 
   on_macos do
-    url "https://github.com/rachfop/score-compose/releases/download/v0.9/score-compose_0.9_darwin_all.tar.gz"
-    sha256 "ddffdcd2530672963c08d8b0bc7f9ebda1fea81c61aff698a856f3887a38b518"
+    url "https://github.com/rachfop/score-compose/releases/download/v0.11/score-compose_0.11_darwin_all.tar.gz"
+    sha256 "51de3dee2b625076c54311b960ebb155b82b3b60b29e095281aa7e63851160a4"
 
     def install
       bin.install "score-compose"
@@ -18,16 +18,16 @@ class ScoreCompose < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rachfop/score-compose/releases/download/v0.9/score-compose_0.9_linux_arm64.tar.gz"
-      sha256 "1e471ebaf2c9f61e4581dce79cc7c21dddafe971b397d8ee5b53af00cbee59a7"
+      url "https://github.com/rachfop/score-compose/releases/download/v0.11/score-compose_0.11_linux_arm64.tar.gz"
+      sha256 "8dbf759c281ab2fb661fbd1b62d6157e2514cd8194adc04920f960fe57eaa082"
 
       def install
         bin.install "score-compose"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rachfop/score-compose/releases/download/v0.9/score-compose_0.9_linux_amd64.tar.gz"
-      sha256 "fcbb7ee1be5988d01dc6da1b03125215d012ef59c34d7b42932ce58840466007"
+      url "https://github.com/rachfop/score-compose/releases/download/v0.11/score-compose_0.11_linux_amd64.tar.gz"
+      sha256 "7f2cee13c868432080e486a16ec3e968be991ad98e325af332f65910e9e5b003"
 
       def install
         bin.install "score-compose"
