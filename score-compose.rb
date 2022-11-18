@@ -5,29 +5,39 @@
 class ScoreCompose < Formula
   desc ""
   homepage "https://github.com/rachfop/score-compose"
-  version "0.11"
+  version "0.22"
 
   on_macos do
-    url "https://github.com/rachfop/score-compose/releases/download/v0.11/score-compose_0.11_darwin_all.tar.gz"
-    sha256 "51de3dee2b625076c54311b960ebb155b82b3b60b29e095281aa7e63851160a4"
-
-    def install
-      bin.install "score-compose"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rachfop/score-compose/releases/download/v0.11/score-compose_0.11_linux_arm64.tar.gz"
-      sha256 "8dbf759c281ab2fb661fbd1b62d6157e2514cd8194adc04920f960fe57eaa082"
+    if Hardware::CPU.arm?
+      url "https://github.com/rachfop/score-compose/releases/download/v0.22/score-compose_0.22_darwin_arm64.tar.gz"
+      sha256 "37b391f03c84e0ff9e6692a69552bd1c640930d02ec2ff0734450afa7d035706"
 
       def install
         bin.install "score-compose"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rachfop/score-compose/releases/download/v0.11/score-compose_0.11_linux_amd64.tar.gz"
-      sha256 "7f2cee13c868432080e486a16ec3e968be991ad98e325af332f65910e9e5b003"
+      url "https://github.com/rachfop/score-compose/releases/download/v0.22/score-compose_0.22_darwin_amd64.tar.gz"
+      sha256 "a0cacdc9583bada84dacf90222c6046c23e6c7cc037a6c3f6f992aeea063f868"
+
+      def install
+        bin.install "score-compose"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/rachfop/score-compose/releases/download/v0.22/score-compose_0.22_linux_amd64.tar.gz"
+      sha256 "4f499dfed2fffbeeea7d823778195cf1a382d11f62ddfdae2acbb1c933f81162"
+
+      def install
+        bin.install "score-compose"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rachfop/score-compose/releases/download/v0.22/score-compose_0.22_linux_arm64.tar.gz"
+      sha256 "7761283c70ff52afed4250d21af5c14fcac1651759ca0e2b32111624f56560c9"
 
       def install
         bin.install "score-compose"
